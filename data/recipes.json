@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "title": "Spaghetti Carbonara",
+        "ingredients": [
+            "200g spaghetti",
+            "100g pancetta",
+            "2 large eggs",
+            "50g grated Parmesan cheese",
+            "Salt and pepper",
+            "Fresh parsley"
+        ],
+        "instructions": [
+            "Cook the spaghetti according to package instructions.",
+            "In a pan, cook the pancetta until crispy.",
+            "In a bowl, whisk together eggs and Parmesan.",
+            "Drain spaghetti and mix with pancetta.",
+            "Remove from heat, add egg mixture and stir quickly.",
+            "Season with salt, pepper, and garnish with parsley."
+        ],
+        "type":"breakfast",
+        "prepTime": "10 minutes",
+        "cookTime": "15 minutes",
+        "servings": 2,
+        "cuisine": "Italian",
+        "imageUrl":"https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
+        "comments": [
+        {
+          "user": "foodlover92",
+          "comment": "This was so creamy and delicious!",
+          "date": "2024-10-01"
+        },
+        {
+          "user": "chef123",
+          "comment": "I added garlic for extra flavor.",
+          "date": "2024-10-02"
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "title": "Chicken Tacos",
+        "ingredients": [
+            "2 chicken breasts",
+            "1 tsp chili powder",
+            "1 tsp cumin",
+            "Salt and pepper",
+            "4 taco shells",
+            "Lettuce, tomato, cheese, and salsa for topping"
+        ],
+        "instructions": [
+            "Season chicken with chili powder, cumin, salt, and pepper.",
+            "Cook in a skillet over medium heat until fully cooked.",
+            "Slice chicken and place in taco shells.",
+            "Top with lettuce, tomato, cheese, and salsa."
+        ],
+        "type":"dinner",
+        "prepTime": "10 minutes",
+        "cookTime": "15 minutes",
+        "servings": 4,
+        "cuisine": "Mexican",
+        "imageUrl":"https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
+        "comments": [
+        {
+          "user": "foodlover92",
+          "comment": "This was so creamy and delicious!",
+          "date": "2024-10-01"
+        },
+        {
+          "user": "chef123",
+          "comment": "I added garlic for extra flavor.",
+          "date": "2024-10-02"
+        }
+      ]
+    },
+    {
+        "id": 3,
+        "title": "Chocolate Chip Cookies",
+        "ingredients": [
+            "1 cup butter",
+            "1 cup sugar",
+            "2 cups flour",
+            "1 cup chocolate chips",
+            "1 tsp vanilla extract",
+            "1/2 tsp baking soda",
+            "1/2 tsp salt",
+            "1 egg"
+        ],
+        "instructions": [
+            "Preheat oven to 350°F (175°C).",
+            "Cream butter and sugar together.",
+            "Add egg and vanilla, mix well.",
+            "In a separate bowl, combine flour, baking soda, and salt.",
+            "Gradually add dry ingredients to wet mixture.",
+            "Stir in chocolate chips.",
+            "Drop spoonfuls onto a baking sheet and bake for 10-12 minutes."
+        ],
+        "type":"lunch",
+        "prepTime": "15 minutes",
+        "cookTime": "12 minutes",
+        "servings": 24,
+        "cuisine": "American",
+        "imageUrl":"https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
+        "comments": [
+        {
+          "user": "foodlover92",
+          "comment": "This was so creamy and delicious!",
+          "date": "2024-10-01"
+        },
+        {
+          "user": "chef123",
+          "comment": "I added garlic for extra flavor.",
+          "date": "2024-10-02"
+        }
+      ]
+    }
+]
+
+
