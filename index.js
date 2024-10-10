@@ -33,12 +33,29 @@ app.get('/api/v1/dinner',(req,res)=>{
 
 app.get('/api/v1/recipe/:id',(req,res)=>{
     const id = req.params.id;
-    console.log(id)
     const recipe = recipes.find(recipe=>recipe.id == id);
-    console.log(recipe)
     res.json(recipe)
 })
 
+
+app.get("/api/v1/top",(req,res)=>{
+    const sortedRecipes = recipes.sort((a,b)=>{
+        return b.rating-a.rating
+    })
+    const top4 = sortedRecipes.slice(0,4)
+    res.json(top4)
+
+})
+
+
+app.get('/api/v1/latest',(req,res)=>{
+    const sortedRecipes = recipes.sort((a,b)=>{
+        return (new Date(a.date) - new Date(b.date));
+    })
+
+    const latest = sortedRecipes.slice(0,4)
+    res.json(latest)
+})
 
 app.listen(port, ()=>{
     console.log("app listening at port "+port )
