@@ -3,9 +3,7 @@ const recipes = require("./data/MOCK_DATA.json")
 const cors = require('cors')
 
 const app = express()
-app.use(cors({
-    origin:"https://4efe-122-161-73-233.ngrok-free.app"
-}))
+app.use(cors())
 
 const port = 8080;
 
