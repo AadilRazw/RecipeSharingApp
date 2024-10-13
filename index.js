@@ -1,10 +1,11 @@
 const express = require("express");
-const recipes = require("./data/MOCK_DATA.json")
 const cors = require('cors')
+const recipes = require("./data/MOCK_DATA.json")
+const users = require('./data/USERS.json')
 
 const app = express()
 app.use(cors())
-
+app.use(express.json());
 const port = 8080;
 
 
@@ -56,6 +57,35 @@ app.get('/api/v1/latest',(req,res)=>{
     const latest = sortedRecipes.slice(0,4)
     res.json(latest)
 })
+
+app.get('/api/v1/search/:searchTerm',(req,res)=>{
+    let {searchTerm} = req.params
+
+    const filteredDta = recipes.filter((recipe)=>{
+        return recipe.title.toLowerCase().includes(searchTerm) || recipe.cuisine.toLowerCase().includes(searchTerm) || recipe.ingredients.join(' ').toLowerCase().includes(searchTerm) || recipe.instructions.join(' ').toLowerCase().includes(searchTerm)
+    
+    })
+
+    res.json(filteredDta)
+})
+
+
+
+
+app.post('/api/v1/login',(req,res)=>{
+    console.log(req.body)
+    const {email} = req.body;
+    console.log(email)
+
+    const present = users.find((user)=>user.email==email)
+
+    if (present){
+        res.json(present)
+    } else{
+        res.json({user:"No user found"})
+    }
+})
+
 
 app.listen(port, ()=>{
     console.log("app listening at port "+port )
