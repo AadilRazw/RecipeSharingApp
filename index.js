@@ -8,6 +8,7 @@ const port = 8080;
 const url = process.env.MONGO_URL;
 const client = new MongoClient(url)
 const databaseName = process.env.MONGO_DB;
+console.log(url,databaseName);
 
 
 
