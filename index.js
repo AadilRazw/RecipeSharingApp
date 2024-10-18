@@ -1,17 +1,55 @@
 const express = require("express");
 const cors = require('cors')
-const recipes = require("./data/MOCK_DATA.json")
-const users = require('./data/USERS.json')
+const {MongoClient} = require("mongodb")
+require('dotenv').config(); 
 
 const app = express()
+const port = 8080;
+const url = process.env.MONGO_URL;
+const client = new MongoClient(url)
+const databaseName = process.env.MONGO_DB;
+
+
+
+let recipes = []
+let users = []
+
 app.use(cors())
 app.use(express.json());
-const port = 8080;
+
+
+async function fetchData() {
+    try {
+        await client.connect();
+        console.log('Connected to MongoDB');
+
+        const database = client.db(databaseName); 
+        const recipeCollection = database.collection("Recipes"); 
+        recipes = await recipeCollection.find().toArray(); 
+
+        const usersCollection = database.collection('Users'); 
+        users = await usersCollection.find().toArray();
+
+        
+
+        
+
+
+    } catch (error) {
+        console.error('Error fetching recipes:', error);
+    } finally {
+        await client.close();  // Always close the connection when done
+    }
+}
+
+fetchData()
+
 
 
 
 app.get('/api/v1/allRecipes',(req,res)=>{
     res.json(recipes)
+
 })
 
 
